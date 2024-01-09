@@ -1,0 +1,8 @@
+<div>
+  <input #firstName name="firstname" type="text">
+  <input #age name="age" type="text">
+  <button (click)="addUser(firstName, age)">add</button>
+</div>
+
+<h1>{{title}}</h1>
+<app-user-list [users]="appUsers"></app-user-list>
