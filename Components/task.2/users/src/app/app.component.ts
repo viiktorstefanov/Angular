@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from './types/User';
 import { UserService } from './user.service';
 
@@ -7,12 +7,18 @@ import { UserService } from './user.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'users';
   appUsers: User[] = [];
 
   constructor(public userService: UserService) {
     this.appUsers = this.userService.users;
+  }
+
+  ngOnInit() {
+    this.userService.getUsers().subscribe((users) => {
+      this.appUsers = users;
+    })
   }
 
   addUser(firstName : HTMLInputElement, age: HTMLInputElement) {

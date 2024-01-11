@@ -1,25 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { User } from './types/User';
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class UserService {
 
-  users : User[] = [
-    {
-      name: 'Ivan',
-      age: 15,
-    },
-    {
-      name: 'Gosho',
-      age: 20,
-    },
-    {
-      name: 'Petur',
-      age: 25,
-    },
-    {
-      name: 'Ani',
-      age: 18,
-    }
-  ];
+  users : User[] = [];
+
+  constructor(private http: HttpClient ) {
+
+  }
 
 
   submitHandler(firstName : HTMLInputElement, age: HTMLInputElement) {
@@ -27,5 +17,9 @@ export class UserService {
 
     firstName.value = '';
     age.value = '';
+  }
+
+  getUsers() {
+    return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users')
   }
 }

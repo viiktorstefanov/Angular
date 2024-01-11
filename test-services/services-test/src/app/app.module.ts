@@ -3,15 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserListItemComponent } from './user-list-item/user-list-item.component';
-import { UserService } from './user.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CreateUserComponent,
     UserListComponent,
     UserListItemComponent
   ],
