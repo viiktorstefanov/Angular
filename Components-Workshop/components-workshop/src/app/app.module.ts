@@ -11,6 +11,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostItemComponent } from './posts-list/post-item/post-item.component';
 import { ThemeItemComponent } from './themes-list/theme-item/theme-item.component';
 import { SharedModule } from './shared/shared.module';
+import { HomeComponent } from './home/home.component';
+import { UserModule } from './user/user.module';
+import { ThemesModule } from './themes/themes.module';
+import { DefaultComponent } from './default/default.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +25,18 @@ import { SharedModule } from './shared/shared.module';
     PostsListComponent,
     PostItemComponent,
     ThemeItemComponent,
+    HomeComponent,
+    DefaultComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    UserModule,
+    ThemesModule
   ],
   providers: [
     provideClientHydration()
