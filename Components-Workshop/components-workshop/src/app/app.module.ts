@@ -17,6 +17,7 @@ import { ThemesModule } from './themes/themes.module';
 import { DefaultComponent } from './default/default.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

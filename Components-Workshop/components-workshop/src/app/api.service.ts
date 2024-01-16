@@ -21,5 +21,9 @@ export class ApiService {
     return this.http.get<Theme[]>(`${environment.baseUrl}/themes`)
   }
 
+  getTheme(id: string) {
+    return this.http.get<Theme>(`${environment.baseUrl}/themes/${id}`)
+  }
+
 
 }

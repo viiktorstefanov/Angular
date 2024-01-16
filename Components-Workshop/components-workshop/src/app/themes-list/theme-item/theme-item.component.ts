@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Theme } from '../../types/Theme';
+import { UserService } from '../../user/user.service';
 
 @Component({
   selector: 'app-theme-item',
@@ -28,4 +29,12 @@ export class ThemeItemComponent {
   updatedAt: '',
   __v: 0,
 };
+
+constructor(private userService: UserService) {
+
+}
+
+get isLogged(): boolean {
+  return this.userService.isLogged;
+}
 }
