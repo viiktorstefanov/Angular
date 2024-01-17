@@ -15,8 +15,12 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: '**',
+    path: 'not-found',
     component: DefaultComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/not-found'
   }
 ];
 
