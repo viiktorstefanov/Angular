@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -13,9 +14,12 @@ export class LoginComponent {
 
   }
 
-  login(email: string, password: string): void {
+  loginHandler(form : NgForm): void {
+    if(form.invalid) {
+      return;
+    }
     //edit when have auth
-    this.userService.login();
-    this.router.navigate(['home'])
+    // this.userService.login();
+    // this.router.navigate(['home'])
   }
 }

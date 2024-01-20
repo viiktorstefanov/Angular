@@ -31,13 +31,13 @@ import { WelcomeComponent } from './welcome/welcome.component';
     WelcomeComponent,
   ],
   imports: [
+    UserModule,
+    ThemesModule, 
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CoreModule,
     SharedModule,
-    UserModule,
-    ThemesModule
   ],
   providers: [
     provideClientHydration()
