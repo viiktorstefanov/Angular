@@ -19,8 +19,8 @@ export class LoginComponent {
       return;
     }
     //edit when have auth
-    // this.userService.login();
-    // this.router.navigate(['home'])
+    this.userService.login();
+    this.router.navigate(['home'])
   }
 
 }

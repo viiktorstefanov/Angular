@@ -5,6 +5,7 @@ import { ThemesRoutingModule } from './themes-routing.module';
 import { ThemeDetailsComponent } from './details/details.component';
 import { CommentComponent } from './comment/comment.component';
 import { AnswerCommentComponent } from './answer-comment/answer-comment.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,8 @@ import { AnswerCommentComponent } from './answer-comment/answer-comment.componen
   ],
   imports: [
     CommonModule,
-    ThemesRoutingModule
+    ThemesRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class ThemesModule { }

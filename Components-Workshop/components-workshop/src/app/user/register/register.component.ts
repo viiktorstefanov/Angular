@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { matchPasswordsValidator } from '../../shared/validators';
 import { log } from 'console';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-register',
@@ -22,9 +23,12 @@ export class RegisterComponent {
     }),
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private userService: UserService) {}
 
   registerSubmitHandler() :void {
+    if(this.form.invalid) {
+      return;
+    }
     console.log(this.form.value);
     
   }
