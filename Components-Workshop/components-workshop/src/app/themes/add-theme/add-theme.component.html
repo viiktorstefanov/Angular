@@ -39,7 +39,7 @@
         <button class="cancel" type="button" routerLink="/themes">
           Cancel
         </button>
-        <button class="public">Post</button>
+        <button [disabled]="form.invalid" class="public">Post</button>
       </div>
     </form>
   </div>

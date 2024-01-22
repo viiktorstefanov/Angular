@@ -22,10 +22,11 @@ export class UserService {
 
   login(): void {
     this.user = {
+      username: 'baceviki',
       email: 'viktor@abv.bg',
       firstName: 'Viktor',
-
-    };
+      tel: '359886003010',
+    } as any;
 
     localStorage.setItem('[user]', JSON.stringify(this.user));
   }
