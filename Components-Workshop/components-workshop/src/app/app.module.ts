@@ -16,6 +16,14 @@ import { UserModule } from './user/user.module';
 import { ThemesModule } from './themes/themes.module';
 import { DefaultComponent } from './default/default.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button'; 
+
 
 
 @NgModule({
@@ -29,6 +37,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     HomeComponent,
     DefaultComponent,
     WelcomeComponent,
+    ToolbarComponent,
   ],
   imports: [
     UserModule,
@@ -38,6 +47,12 @@ import { WelcomeComponent } from './welcome/welcome.component';
     HttpClientModule,
     CoreModule,
     SharedModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatButtonModule
   ],
   providers: [
     provideClientHydration()
